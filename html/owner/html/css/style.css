@@ -1,0 +1,136 @@
+:root{
+    --black-color: #010101;
+    --main-color: #007ea7;
+    --alt-color: #00a8e8;
+    --gray-color: rgb(219, 219, 219);
+    --main-transition: 0.5s;
+}
+/* Start Side-bar */
+.side-bar{
+    background-color: #051924;
+    width: fit-content;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    right: 0;
+}
+.side-bar .nav a{
+    border-bottom: 1px solid white;
+    width: 100%;
+    transition: 0.5s;
+}
+.side-bar .nav a:hover{
+    background-color: var(--alt-color);
+}
+/* End Side-bar */
+/* Start Login & Register */
+.register
+,.login{
+    background-image: url(../../../../images/hall-2.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.register::before
+,.login::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #010101b7;
+}
+.register-form
+,.login-form{
+    background-color: rgba(255, 255, 255, 0.692);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+}
+form .form-control{
+    width: 250px;
+    border-radius: 0;
+}
+.register-form .form-control::placeholder
+,.login-form .form-control::placeholder{
+    transition: 1s;
+}
+.register-form .form-control:focus::placeholder
+.login-form .form-control:focus::placeholder{
+    opacity: 0;
+}
+.register-form .btn:hover
+,.login-form .btn:hover
+,.hallinfo .info-form .btn:hover{
+    background-color: var(--alt-color);
+}
+@media(max-width: 767px){
+    .register-form .input{
+        flex-direction: column;
+    }
+}
+/* End Login & Register*/
+/* Start Halls Information */
+.hallinfo{
+    background-color: var(--gray-color);
+    z-index: -5;
+}
+.hallinfo .info-form{
+    background-color: #fff;
+}
+.hallinfo .info-form textarea{
+    height: 100px;
+    resize: none;
+}
+
+.hallinfo .info-form .form-control::placeholder{
+    transition: 0.8s;
+}
+.hallinfo .info-form .form-control:focus::placeholder{
+    opacity: 0;
+}
+/* End Halls Information */
+/* Start Photos */
+.photos
+,.booking{
+    background-color: var(--gray-color);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: -5;
+}
+.photos .important-info
+,.booking .important-info
+,.photos .add-photo{
+    background-color: #fff;
+}
+.photos .important-info::before
+,.booking .important-info::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--main-color);
+}
+.photos .add-photo .btn:hover{
+    background-color: var(--alt-color);
+}
+/* End Photos */
+/* Start Booking */
+.booking .table thead{
+    background-color: #051924;
+    color: #fff;
+}
+.booking .table tbody{
+    background-color: rgb(207, 230, 252);
+    color: #051924;
+}
+/* End Booking */
